@@ -4,6 +4,8 @@
  */
 package com.mycompany.showdojavao.view;
 
+import com.mycompany.showdojavao.Model.Player;
+
 /**
  *
  * @author LUISHENRIQUEPEDROSOS
@@ -41,6 +43,11 @@ public class ViewEntrada extends javax.swing.JFrame {
         btnEntrar.setBackground(new java.awt.Color(255, 255, 51));
         btnEntrar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btnEntrar.setText("Entrar");
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -78,6 +85,12 @@ public class ViewEntrada extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        Player player = new Player(0);
+        this.dispose();
+        new ViewPergunta1().setVisible(true);
+    }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
      * @param args the command line arguments
