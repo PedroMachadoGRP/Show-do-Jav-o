@@ -150,6 +150,7 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
+            new ViewDerrota().setVisible(true);
         }
     }//GEN-LAST:event_RespostaBActionPerformed
 
@@ -159,6 +160,7 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
+            new ViewDerrota().setVisible(true);
         }
     }//GEN-LAST:event_RespostaCActionPerformed
 
@@ -168,6 +170,7 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
+            new ViewDerrota().setVisible(true);
         }
     }//GEN-LAST:event_RespostaDActionPerformed
 
