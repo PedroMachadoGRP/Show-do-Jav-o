@@ -4,10 +4,18 @@
  */
 package com.mycompany.showdojavao.controller;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author LUISHENRIQUEPEDROSOS
  */
 public class JogoController {
+    public static boolean respostaCorreta(){
+        return true;
+    }
     
-}
+    public static boolean respostaIncorreta(){
+    return false;   
+    }
+}  
