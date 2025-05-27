@@ -109,6 +109,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Cairo"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RespostaAActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="RespostaC">
           <Properties>
@@ -120,6 +123,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Brasilia"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RespostaCActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="RespostaD">
           <Properties>
@@ -131,6 +137,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Sidney"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RespostaDActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="RespostaB">
           <Properties>
@@ -142,6 +151,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Vancouver"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RespostaBActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -4,6 +4,10 @@
  */
 package com.mycompany.showdojavao.view;
 
+import com.mycompany.showdojavao.Model.Player;
+import com.mycompany.showdojavao.controller.JogoController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LUISHENRIQUEPEDROSOS
@@ -15,6 +19,7 @@ public class ViewPergunta1 extends javax.swing.JFrame {
      */
     public ViewPergunta1() {
         initComponents();
+        
     }
 
     /**
@@ -44,18 +49,38 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         RespostaA.setBackground(new java.awt.Color(255, 255, 51));
         RespostaA.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         RespostaA.setText("Cairo");
+        RespostaA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaAActionPerformed(evt);
+            }
+        });
 
         RespostaC.setBackground(new java.awt.Color(255, 255, 51));
         RespostaC.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         RespostaC.setText("Brasilia");
+        RespostaC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaCActionPerformed(evt);
+            }
+        });
 
         RespostaD.setBackground(new java.awt.Color(255, 255, 51));
         RespostaD.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         RespostaD.setText("Sidney");
+        RespostaD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaDActionPerformed(evt);
+            }
+        });
 
         RespostaB.setBackground(new java.awt.Color(255, 255, 51));
         RespostaB.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         RespostaB.setText("Vancouver");
+        RespostaB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -109,6 +134,43 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void RespostaAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaAActionPerformed
+        boolean resposta = JogoController.respostaCorreta();
+        
+        if(resposta == true){
+            JOptionPane.showMessageDialog(null, "Certa resposta");
+            this.dispose();
+            new ViewPergunta2().setVisible(true);
+        }
+    }//GEN-LAST:event_RespostaAActionPerformed
+
+    private void RespostaBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaBActionPerformed
+        boolean resposta = JogoController.respostaIncorreta();
+        
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+        }
+    }//GEN-LAST:event_RespostaBActionPerformed
+
+    private void RespostaCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaCActionPerformed
+                boolean resposta = JogoController.respostaIncorreta();
+        
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+        }
+    }//GEN-LAST:event_RespostaCActionPerformed
+
+    private void RespostaDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaDActionPerformed
+                boolean resposta = JogoController.respostaIncorreta();
+        
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+        }
+    }//GEN-LAST:event_RespostaDActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -139,7 +201,7 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewPergunta1().setVisible(true);
+//                new ViewPergunta1().setVisible(true);
             }
         });
     }
