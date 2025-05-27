@@ -21,5 +21,28 @@ Este jogo é uma versão simplificada e divertida inspirada no Show do Milhão. 
 
 ## Autores
 
--[@Luis](https://github.com/luis-henrique-santarem)
--[@Pedro](https://github.com/PedroMachadoGRP)
+- [@Luis](https://github.com/luis-henrique-santarem)
+- [@Pedro](https://github.com/PedroMachadoGRP)
+
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+
+## Tecnologias 
+
+![](https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=Git&logoColor=white)
+<img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/java.png" alt="Texto alternativo" width="50" >
+
+## Instalação
+
+1. Clonar o repositório:
+```bash
+git clone https://github.com/PedroMachadoGRP/Show-do-Jav-o.git
+
+
+
+
+
+
