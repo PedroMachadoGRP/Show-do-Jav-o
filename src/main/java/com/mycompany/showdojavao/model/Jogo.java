@@ -6,8 +6,8 @@ package com.mycompany.showdojavao.model;
 
 /**
  *
- * @author LUISHENRIQUEPEDROSOS
+ * @author PEDROMACHADODASILVA
  */
-public class model {
+public class Jogo {
     
 }
