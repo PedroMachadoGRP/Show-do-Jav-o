@@ -35,8 +35,12 @@ public class ViewPergunta5 extends javax.swing.JFrame {
         RespostaC1 = new javax.swing.JButton();
         RespostaD1 = new javax.swing.JButton();
         RespostaB1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,111 +48,139 @@ public class ViewPergunta5 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(52, 52, 186));
 
-        RespostaA2.setBackground(new java.awt.Color(255, 255, 51));
-        RespostaA2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RespostaA2.setBackground(new java.awt.Color(193, 29, 29));
+        RespostaA2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        RespostaA2.setForeground(new java.awt.Color(255, 255, 255));
         RespostaA2.setText("George Lucas");
+        RespostaA2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 51)));
         RespostaA2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RespostaA2ActionPerformed(evt);
             }
         });
 
-        RespostaC1.setBackground(new java.awt.Color(255, 255, 51));
-        RespostaC1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RespostaC1.setBackground(new java.awt.Color(193, 29, 29));
+        RespostaC1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        RespostaC1.setForeground(new java.awt.Color(255, 255, 255));
         RespostaC1.setText("James Wong");
+        RespostaC1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 51)));
         RespostaC1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RespostaC1ActionPerformed(evt);
             }
         });
 
-        RespostaD1.setBackground(new java.awt.Color(255, 255, 51));
-        RespostaD1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RespostaD1.setBackground(new java.awt.Color(193, 29, 29));
+        RespostaD1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        RespostaD1.setForeground(new java.awt.Color(255, 255, 255));
         RespostaD1.setText("Christopher Nolan");
+        RespostaD1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 51)));
         RespostaD1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RespostaD1ActionPerformed(evt);
             }
         });
 
-        RespostaB1.setBackground(new java.awt.Color(255, 255, 51));
-        RespostaB1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RespostaB1.setBackground(new java.awt.Color(193, 29, 29));
+        RespostaB1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        RespostaB1.setForeground(new java.awt.Color(255, 255, 255));
         RespostaB1.setText("James Wan");
+        RespostaB1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 51)));
         RespostaB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RespostaB1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 51));
-        jLabel1.setText("5. Qual o nome do diretor do filme");
-
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 51));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Oppenheimer");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("A");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("B");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("C");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("D");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(216, 216, 216)
-                        .addComponent(jLabel2)))
-                .addContainerGap(29, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(94, 94, 94)
+                .addGap(13, 13, 13)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(RespostaC1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RespostaA2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(RespostaD1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(RespostaB1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(150, 150, 150))
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(RespostaA2, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(RespostaD1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RespostaC1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RespostaB1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(69, 69, 69)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RespostaB1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RespostaA2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(83, 83, 83)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RespostaD1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RespostaC1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addGap(93, 93, 93)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(RespostaA2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(42, 42, 42)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(RespostaB1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RespostaC1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RespostaD1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("5. Qual o nome do diretor do filme");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 886, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(48, 48, 48)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(48, 48, 48)))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(jLabel1)
+                .addContainerGap(21, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 714, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(43, 43, 43)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(44, 44, 44)))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -164,26 +196,6 @@ public class ViewPergunta5 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void RespostaA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaA2ActionPerformed
-        boolean resposta = JogoController.respostaIncorreta();
-
-        if(resposta == false){
-            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
-            this.dispose();
-            new ViewDerrota().setVisible(true);
-        }
-    }//GEN-LAST:event_RespostaA2ActionPerformed
-
-    private void RespostaC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaC1ActionPerformed
-        boolean resposta = JogoController.respostaIncorreta();
-
-        if(resposta == false){
-            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
-            this.dispose();
-            new ViewDerrota().setVisible(true);
-        }
-    }//GEN-LAST:event_RespostaC1ActionPerformed
 
     private void RespostaB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaB1ActionPerformed
         boolean resposta = JogoController.respostaIncorreta();
@@ -204,6 +216,26 @@ public class ViewPergunta5 extends javax.swing.JFrame {
             new ViewVitoria().setVisible(true);
         }
     }//GEN-LAST:event_RespostaD1ActionPerformed
+
+    private void RespostaC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaC1ActionPerformed
+        boolean resposta = JogoController.respostaIncorreta();
+
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+            new ViewDerrota().setVisible(true);
+        }
+    }//GEN-LAST:event_RespostaC1ActionPerformed
+
+    private void RespostaA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaA2ActionPerformed
+        boolean resposta = JogoController.respostaIncorreta();
+
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+            new ViewDerrota().setVisible(true);
+        }
+    }//GEN-LAST:event_RespostaA2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,6 +279,10 @@ public class ViewPergunta5 extends javax.swing.JFrame {
     private javax.swing.JButton RespostaD1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
