@@ -12,11 +12,13 @@ Este jogo é uma versão simplificada e divertida inspirada no Show do Milhão. 
 
 ### Tela Principal
 
-![image](https://github.com/user-attachments/assets/9c602070-ac7b-4167-be45-4e3ca803d627)
+![image](https://github.com/user-attachments/assets/82e9119b-cd3f-4215-820c-42a77fa0953a)
+
 
 ### Tela Exemplo de Pergunta
 
-![image](https://github.com/user-attachments/assets/2c267b9d-5668-4f82-b067-98701cad6a1a)
+![image](https://github.com/user-attachments/assets/e36cf109-3007-48f4-8295-d4b5925f7f43)
+
 
  ## Autores
 
