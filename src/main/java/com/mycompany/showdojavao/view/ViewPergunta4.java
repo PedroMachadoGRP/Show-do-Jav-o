@@ -4,6 +4,9 @@
  */
 package com.mycompany.showdojavao.view;
 
+import com.mycompany.showdojavao.controller.JogoController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author PEDROMACHADODASILVA
@@ -29,10 +32,10 @@ public class ViewPergunta4 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        RespostaA1 = new javax.swing.JButton();
+        RespostaC = new javax.swing.JButton();
+        RespostaD = new javax.swing.JButton();
+        RespostaB = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,23 +43,47 @@ public class ViewPergunta4 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 51));
-        jLabel1.setText("4. Qual o nome da proteina vindo");
+        jLabel1.setText("4. Qual a proteina que pode ser");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 51));
-        jLabel2.setText("da semente da mamona");
+        jLabel2.setText("extraida da semente da mamona");
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 51));
-        jButton1.setText("Abrina");
+        RespostaA1.setBackground(new java.awt.Color(255, 255, 51));
+        RespostaA1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RespostaA1.setText("Diphtheria ");
+        RespostaA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaA1ActionPerformed(evt);
+            }
+        });
 
-        jButton5.setBackground(new java.awt.Color(255, 255, 51));
-        jButton5.setText("Diphtheria ");
+        RespostaC.setBackground(new java.awt.Color(255, 255, 51));
+        RespostaC.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RespostaC.setText("Ricinina");
+        RespostaC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaCActionPerformed(evt);
+            }
+        });
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 51));
-        jButton6.setText("Ricina");
+        RespostaD.setBackground(new java.awt.Color(255, 255, 51));
+        RespostaD.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RespostaD.setText("ricina ");
+        RespostaD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaDActionPerformed(evt);
+            }
+        });
 
-        jButton7.setBackground(new java.awt.Color(255, 255, 51));
-        jButton7.setText("Ricinina");
+        RespostaB.setBackground(new java.awt.Color(255, 255, 51));
+        RespostaB.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RespostaB.setText("Abrina");
+        RespostaB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -65,40 +92,37 @@ public class ViewPergunta4 extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 759, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(205, 205, 205)
+                        .addGap(226, 226, 226)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(180, 180, 180)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(191, Short.MAX_VALUE))
+                            .addComponent(RespostaB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RespostaC, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
+                        .addGap(82, 82, 82)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(RespostaA1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                            .addComponent(RespostaD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(126, 126, 126)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
+                    .addComponent(RespostaB, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RespostaD, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(264, Short.MAX_VALUE))
+                    .addComponent(RespostaC, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RespostaA1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(297, 297, 297))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -114,6 +138,46 @@ public class ViewPergunta4 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RespostaDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaDActionPerformed
+      boolean resposta = JogoController.respostaCorreta();
+        
+        if(resposta == true){
+            JOptionPane.showMessageDialog(null, "Certa resposta");
+            this.dispose();
+            new ViewPergunta5().setVisible(true);
+        } 
+    }//GEN-LAST:event_RespostaDActionPerformed
+
+    private void RespostaBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaBActionPerformed
+        boolean resposta = JogoController.respostaIncorreta();
+        
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+            new ViewDerrota().setVisible(true);
+        }
+    }//GEN-LAST:event_RespostaBActionPerformed
+
+    private void RespostaCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaCActionPerformed
+        boolean resposta = JogoController.respostaIncorreta();
+        
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+            new ViewDerrota().setVisible(true);
+        }
+    }//GEN-LAST:event_RespostaCActionPerformed
+
+    private void RespostaA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaA1ActionPerformed
+        boolean resposta = JogoController.respostaIncorreta();
+        
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+            new ViewDerrota().setVisible(true);
+        }
+    }//GEN-LAST:event_RespostaA1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,10 +215,10 @@ public class ViewPergunta4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton RespostaA1;
+    private javax.swing.JButton RespostaB;
+    private javax.swing.JButton RespostaC;
+    private javax.swing.JButton RespostaD;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
