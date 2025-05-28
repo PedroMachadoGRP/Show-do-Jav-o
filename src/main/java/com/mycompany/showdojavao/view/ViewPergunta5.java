@@ -12,12 +12,13 @@ import javax.swing.JOptionPane;
  * @author PEDROMACHADODASILVA
  */
 public class ViewPergunta5 extends javax.swing.JFrame {
-
+int ganho = 20;
     /**
      * Creates new form ViewPergunta5
      */
-    public ViewPergunta5() {
+    public ViewPergunta5(int pontuacao) {
         initComponents();
+        ganho += pontuacao;
     }
 
     /**
@@ -203,7 +204,7 @@ public class ViewPergunta5 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaB1ActionPerformed
 
@@ -211,9 +212,8 @@ public class ViewPergunta5 extends javax.swing.JFrame {
         boolean resposta = JogoController.respostaCorreta();
 
         if(resposta == true){
-            JOptionPane.showMessageDialog(null, "Certa resposta");
             this.dispose();
-            new ViewVitoria().setVisible(true);
+            new ViewVitoria(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaD1ActionPerformed
 
@@ -223,7 +223,7 @@ public class ViewPergunta5 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaC1ActionPerformed
 
@@ -233,7 +233,7 @@ public class ViewPergunta5 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaA2ActionPerformed
 
@@ -267,7 +267,7 @@ public class ViewPergunta5 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewPergunta5().setVisible(true);
+                //new ViewPergunta5().setVisible(true);
             }
         });
     }
