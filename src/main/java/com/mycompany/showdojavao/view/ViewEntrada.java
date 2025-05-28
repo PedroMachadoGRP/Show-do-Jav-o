@@ -11,7 +11,7 @@ import com.mycompany.showdojavao.Model.Player;
  * @author LUISHENRIQUEPEDROSOS
  */
 public class ViewEntrada extends javax.swing.JFrame {
-
+    int pontuacao = 0;
     /**
      * Creates new form ViewEntrada
      */
@@ -113,7 +113,7 @@ public class ViewEntrada extends javax.swing.JFrame {
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         Player player = new Player(0);
         this.dispose();
-        new ViewPergunta1().setVisible(true);
+        new ViewPergunta1(pontuacao).setVisible(true);
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
