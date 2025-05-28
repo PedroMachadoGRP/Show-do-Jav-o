@@ -13,6 +13,6 @@ import com.mycompany.showdojavao.view.ViewEntrada;
 public class ShowDoJavao {
 
     public static void main(String[] args) {
-         new ViewEntrada().setVisible(true);
+        new ViewEntrada().setVisible(true);
     }
 }
