@@ -31,6 +31,18 @@ Este jogo é uma versão simplificada e divertida inspirada no Show do Milhão. 
 Este projeto está licenciado sob a licença MIT Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 
+
+
+## Funcionalidade
+
+- Interface amigável e intuitiva
+- Sistema de perguntas de múltipla escolha
+- Interatividade
+- Sistema de progresso
+- Mensagem final de conclusão
+
+
+
 ## Tecnologias 
 
 ![](https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=Git&logoColor=white)
@@ -40,10 +52,10 @@ Este projeto está licenciado sob a licença MIT Veja o arquivo [LICENSE](LICENS
 
 1. Clonar o repositório:
 ```bash
+# Clone o repositório
 git clone https://github.com/PedroMachadoGRP/Show-do-Jav-o.git
 
+# Acesse o diretório do projeto
+cd Show-do-Jav-o
 
-
-
-
-
+# Execute o projeto com sua IDE Java favorita ou via terminal
