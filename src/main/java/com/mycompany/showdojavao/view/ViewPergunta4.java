@@ -12,12 +12,13 @@ import javax.swing.JOptionPane;
  * @author PEDROMACHADODASILVA
  */
 public class ViewPergunta4 extends javax.swing.JFrame {
-
+    int ganho = 20;
     /**
      * Creates new form ViewPergunta4
      */
-    public ViewPergunta4() {
+    public ViewPergunta4(int pontuacao) {
         initComponents();
+        ganho += pontuacao;
     }
 
     /**
@@ -192,9 +193,9 @@ public class ViewPergunta4 extends javax.swing.JFrame {
       boolean resposta = JogoController.respostaCorreta();
         
         if(resposta == true){
-            JOptionPane.showMessageDialog(null, "Certa resposta");
+            JOptionPane.showMessageDialog(null, "Certa resposta,Sua pontuação atual é de: " +  ganho);
             this.dispose();
-            new ViewPergunta5().setVisible(true);
+            new ViewPergunta5(ganho).setVisible(true);
         } 
     }//GEN-LAST:event_RespostaDActionPerformed
 
@@ -204,7 +205,7 @@ public class ViewPergunta4 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaBActionPerformed
 
@@ -214,7 +215,7 @@ public class ViewPergunta4 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaCActionPerformed
 
@@ -224,7 +225,7 @@ public class ViewPergunta4 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaA1ActionPerformed
 
@@ -258,7 +259,7 @@ public class ViewPergunta4 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewPergunta4().setVisible(true);
+                //new ViewPergunta4().setVisible(true);
             }
         });
     }
