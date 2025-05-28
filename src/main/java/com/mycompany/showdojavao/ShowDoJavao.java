@@ -4,6 +4,8 @@
 
 package com.mycompany.showdojavao;
 
+import com.mycompany.showdojavao.view.ViewEntrada;
+
 /**
  *
  * @author PEDROMACHADODASILVA
@@ -11,6 +13,6 @@ package com.mycompany.showdojavao;
 public class ShowDoJavao {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+         new ViewEntrada().setVisible(true);
     }
 }
