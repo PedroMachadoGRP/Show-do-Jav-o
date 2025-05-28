@@ -4,6 +4,9 @@
  */
 package com.mycompany.showdojavao.view;
 
+import com.mycompany.showdojavao.controller.JogoController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LUISHENRIQUEPEDROSOS
@@ -45,10 +48,20 @@ public class ViewPergunta3 extends javax.swing.JFrame {
         RespostaA2.setBackground(new java.awt.Color(255, 255, 51));
         RespostaA2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         RespostaA2.setText("Maya");
+        RespostaA2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaA2ActionPerformed(evt);
+            }
+        });
 
         RespostaC1.setBackground(new java.awt.Color(255, 255, 51));
         RespostaC1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         RespostaC1.setText("Irina");
+        RespostaC1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaC1ActionPerformed(evt);
+            }
+        });
 
         RespostaD1.setBackground(new java.awt.Color(255, 255, 51));
         RespostaD1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -57,11 +70,18 @@ public class ViewPergunta3 extends javax.swing.JFrame {
         RespostaB1.setBackground(new java.awt.Color(255, 255, 51));
         RespostaB1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         RespostaB1.setText("Laika");
+        RespostaB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RespostaB1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 51));
         jLabel1.setText("3. Qual o nome da primeira cadela");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 51));
         jLabel2.setText("a ir ao espaço");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -161,6 +181,36 @@ public class ViewPergunta3 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RespostaA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaA2ActionPerformed
+                boolean resposta = JogoController.respostaIncorreta();
+        
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+            new ViewDerrota().setVisible(true);
+        }
+    }//GEN-LAST:event_RespostaA2ActionPerformed
+
+    private void RespostaB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaB1ActionPerformed
+        boolean resposta = JogoController.respostaCorreta();
+        
+        if(resposta == true){
+            JOptionPane.showMessageDialog(null, "Certa resposta");
+            this.dispose();
+            new ViewPergunta4().setVisible(true);
+        }
+    }//GEN-LAST:event_RespostaB1ActionPerformed
+
+    private void RespostaC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespostaC1ActionPerformed
+        boolean resposta = JogoController.respostaIncorreta();
+        
+        if(resposta == false){
+            JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
+            this.dispose();
+            new ViewDerrota().setVisible(true);
+        }
+    }//GEN-LAST:event_RespostaC1ActionPerformed
 
     /**
      * @param args the command line arguments

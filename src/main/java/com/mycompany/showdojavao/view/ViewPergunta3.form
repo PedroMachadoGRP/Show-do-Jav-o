@@ -140,6 +140,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Maya"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RespostaA2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="RespostaC1">
           <Properties>
@@ -151,6 +154,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Irina"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RespostaC1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="RespostaD1">
           <Properties>
@@ -173,11 +179,17 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Laika"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RespostaB1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="48" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="3. Qual o nome da primeira cadela"/>
           </Properties>
@@ -186,6 +198,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="48" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="a ir ao espa&#xe7;o"/>
           </Properties>
