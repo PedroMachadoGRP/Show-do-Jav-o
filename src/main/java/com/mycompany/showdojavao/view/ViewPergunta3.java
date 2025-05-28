@@ -12,12 +12,13 @@ import javax.swing.JOptionPane;
  * @author LUISHENRIQUEPEDROSOS
  */
 public class ViewPergunta3 extends javax.swing.JFrame {
-
+    int ganho = 20;
     /**
      * Creates new form ViewPergunta3
      */
-    public ViewPergunta3() {
+    public ViewPergunta3(int pontuacao) {
         initComponents();
+        ganho += pontuacao;
     }
 
     /**
@@ -40,10 +41,6 @@ public class ViewPergunta3 extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        RespostaA1 = new javax.swing.JButton();
-        RespostaC = new javax.swing.JButton();
-        RespostaD = new javax.swing.JButton();
-        RespostaB = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -126,7 +123,7 @@ public class ViewPergunta3 extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(0, 207, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(18, 18, 18)
@@ -175,22 +172,6 @@ public class ViewPergunta3 extends javax.swing.JFrame {
                 .addGap(122, 122, 122))
         );
 
-        RespostaA1.setBackground(new java.awt.Color(255, 255, 51));
-        RespostaA1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        RespostaA1.setText("360");
-
-        RespostaC.setBackground(new java.awt.Color(255, 255, 51));
-        RespostaC.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        RespostaC.setText("487");
-
-        RespostaD.setBackground(new java.awt.Color(255, 255, 51));
-        RespostaD.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        RespostaD.setText("2050");
-
-        RespostaB.setBackground(new java.awt.Color(255, 255, 51));
-        RespostaB.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        RespostaB.setText("506");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -198,34 +179,12 @@ public class ViewPergunta3 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(157, 157, 157)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(RespostaC, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(RespostaA1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(220, 220, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(RespostaD, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(RespostaB, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(158, 158, 158)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(172, 172, 172)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(RespostaA1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(RespostaB, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(RespostaC, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(RespostaD, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(172, 172, 172)))
         );
 
         pack();
@@ -237,7 +196,7 @@ public class ViewPergunta3 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaA2ActionPerformed
 
@@ -245,9 +204,9 @@ public class ViewPergunta3 extends javax.swing.JFrame {
         boolean resposta = JogoController.respostaCorreta();
         
         if(resposta == true){
-            JOptionPane.showMessageDialog(null, "Certa resposta");
+            JOptionPane.showMessageDialog(null, "Certa resposta,Sua pontuação atual é de: " +  ganho);
             this.dispose();
-            new ViewPergunta4().setVisible(true);
+            new ViewPergunta4(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaB1ActionPerformed
 
@@ -257,7 +216,7 @@ public class ViewPergunta3 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(ganho).setVisible(true);
         }
     }//GEN-LAST:event_RespostaC1ActionPerformed
 
@@ -291,19 +250,15 @@ public class ViewPergunta3 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewPergunta3().setVisible(true);
+               // new ViewPergunta3().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton RespostaA1;
     private javax.swing.JButton RespostaA2;
-    private javax.swing.JButton RespostaB;
     private javax.swing.JButton RespostaB1;
-    private javax.swing.JButton RespostaC;
     private javax.swing.JButton RespostaC1;
-    private javax.swing.JButton RespostaD;
     private javax.swing.JButton RespostaD1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -13,12 +13,13 @@ import javax.swing.JOptionPane;
  * @author LUISHENRIQUEPEDROSOS
  */
 public class ViewPergunta1 extends javax.swing.JFrame {
-
+    int novaPontuacao = 0;
     /**
      * Creates new form ViewPergunta1
      */
-    public ViewPergunta1() {
+    public ViewPergunta1(int pontuacao) {
         initComponents();
+        novaPontuacao += pontuacao;
         
     }
 
@@ -114,34 +115,37 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(146, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel3))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(RespostaA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(RespostaC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(RespostaD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(RespostaB, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)))
-                    .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(RespostaC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(RespostaD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(RespostaB, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(RespostaA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(144, 144, 144))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(117, 117, 117)
+                .addGap(111, 111, 111)
                 .addComponent(jLabel1)
-                .addGap(52, 52, 52)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RespostaA)
                     .addComponent(jLabel2))
-                .addGap(18, 34, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RespostaB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -153,7 +157,7 @@ public class ViewPergunta1 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RespostaD)
                     .addComponent(jLabel5))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -174,9 +178,10 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         boolean resposta = JogoController.respostaCorreta();
         
         if(resposta == true){
-            JOptionPane.showMessageDialog(null, "Certa resposta");
+            novaPontuacao+= 20;
+            JOptionPane.showMessageDialog(null, "Certa resposta,Sua pontuação atual é de: " +  novaPontuacao);
             this.dispose();
-            new ViewPergunta2().setVisible(true);
+            new ViewPergunta2(novaPontuacao).setVisible(true);
         }
     }//GEN-LAST:event_RespostaAActionPerformed
 
@@ -186,7 +191,7 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(novaPontuacao).setVisible(true);
         }
     }//GEN-LAST:event_RespostaBActionPerformed
 
@@ -196,7 +201,7 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(novaPontuacao).setVisible(true);
         }
     }//GEN-LAST:event_RespostaCActionPerformed
 
@@ -206,7 +211,7 @@ public class ViewPergunta1 extends javax.swing.JFrame {
         if(resposta == false){
             JOptionPane.showMessageDialog(null, "Errou, vai estudar seu animal");
             this.dispose();
-            new ViewDerrota().setVisible(true);
+            new ViewDerrota(novaPontuacao).setVisible(true);
         }
     }//GEN-LAST:event_RespostaDActionPerformed
 
