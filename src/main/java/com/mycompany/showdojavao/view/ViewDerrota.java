@@ -9,12 +9,13 @@ package com.mycompany.showdojavao.view;
  * @author PEDROMACHADODASILVA
  */
 public class ViewDerrota extends javax.swing.JFrame {
-
+int pontuacaoFinal;
     /**
      * Creates new form ViewDerrota
      */
-    public ViewDerrota() {
+    public ViewDerrota(int pontuacao) {
         initComponents();
+        pontuacaoFinal += pontuacao;
     }
 
     /**
@@ -29,6 +30,7 @@ public class ViewDerrota extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         restartBtn = new javax.swing.JButton();
+        pontuacaoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,19 +51,36 @@ public class ViewDerrota extends javax.swing.JFrame {
             }
         });
 
+        pontuacaoLabel.setBackground(new java.awt.Color(255, 0, 0));
+        pontuacaoLabel.setForeground(new java.awt.Color(255, 255, 51));
+        pontuacaoLabel.setText("jLabel2");
+        pontuacaoLabel.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                pontuacaoLabelAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(257, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(restartBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(273, 273, 273))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(246, 246, 246))))
+                        .addGap(246, 246, 246))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(restartBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(273, 273, 273))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(265, 265, 265)
+                .addComponent(pontuacaoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,7 +89,9 @@ public class ViewDerrota extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63)
                 .addComponent(restartBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(345, Short.MAX_VALUE))
+                .addGap(67, 67, 67)
+                .addComponent(pontuacaoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(234, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -91,6 +112,10 @@ public class ViewDerrota extends javax.swing.JFrame {
         this.dispose();
         new ViewEntrada().setVisible(true);
     }//GEN-LAST:event_restartBtnActionPerformed
+
+    private void pontuacaoLabelAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_pontuacaoLabelAncestorAdded
+       pontuacaoLabel.setText("Sua pontuação final foi de: " + pontuacaoFinal);
+    }//GEN-LAST:event_pontuacaoLabelAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -122,7 +147,7 @@ public class ViewDerrota extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewDerrota().setVisible(true);
+                //new ViewDerrota().setVisible(true);
             }
         });
     }
@@ -130,6 +155,7 @@ public class ViewDerrota extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel pontuacaoLabel;
     private javax.swing.JButton restartBtn;
     // End of variables declaration//GEN-END:variables
 }
